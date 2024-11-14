@@ -4,12 +4,9 @@ Created on Fri Nov  8 23:16:55 2024
 
 @author: Windows
 """
-
 def question_23(nums: list[int]) -> bool:
     for i in range(len(nums)):
-        if nums[i] == nums.count(2): #count là số đếm, bị 
-            return True 
-        else:
-            return False
-if __name__ == "__main__":
+        if nums.count(nums[i])>1:
+            return True
+    return False
     print( question_23([1,1,2,3,4,5]))            
